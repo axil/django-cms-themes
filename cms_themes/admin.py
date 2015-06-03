@@ -14,7 +14,7 @@ admin.site.register(Theme, ThemeAdmin)
 
 from cms.models import Page
 from cms.admin.pageadmin import PageAdmin
-from cms.admin.forms import PageAddForm,PageForm
+from cms.admin.forms import PageForm
 admin.site.unregister(Page)
 t = Page._meta.get_field_by_name("template")[0]
 template_choices = [(x, _(y)) for x,y in settings.CMS_TEMPLATES]

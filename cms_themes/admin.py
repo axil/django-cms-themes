@@ -1,5 +1,5 @@
 from django.contrib import admin, messages
-from models import Theme
+from .models import Theme
 from django.conf import settings
 from django.utils.translation import ugettext, ugettext_lazy as _
 from django.db import models

@@ -59,13 +59,15 @@ def set_themes():
     setattr(settings, 'CMS_TEMPLATES', list(theme_templates) + list(settings.DEFAULT_CMS_TEMPLATES))
     setattr(settings, 'STATICFILES_DIRS', [settings.THEMES_DIR] + list(settings.DEFAULT_STATICFILES_DIRS))
 
-try:
-    from django.conf import settings
-    from django.contrib.sites.models import Site
-    from cms_themes.models import Theme
-
-    init_themes()
-    set_themes()
-except Exception as ex:
-    print('An error occured setting up the themes: %s' % ex)
+#try:
+#    from django.conf import settings
+#    from django.contrib.sites.models import Site
+#    from cms_themes.models import Theme
+#
+#    init_themes()
+#    set_themes()
+#except Exception as ex:
+#    from traceback import format_exc
+#    print('An error occured setting up the themes: %s' % ex)
+#    print(format_exc())
 

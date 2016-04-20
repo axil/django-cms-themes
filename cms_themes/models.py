@@ -10,7 +10,7 @@ from django.db.models.signals import post_save, pre_save, post_delete, m2m_chang
 from cms_themes import set_themes
 
 class Theme(models.Model):
-    sites = models.ManyToManyField(Site, null=True, blank=True)
+    sites = models.ManyToManyField(Site, blank=True)
     name = models.CharField(max_length=255, blank=True)
     theme_file = models.FileField(upload_to='themes_archives', null=True)
     

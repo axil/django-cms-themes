@@ -16,7 +16,7 @@ from cms.models import Page
 from cms.admin.pageadmin import PageAdmin
 from cms.admin.forms import PageForm
 admin.site.unregister(Page)
-t = Page._meta.get_field_by_name("template")[0]
+t = Page._meta.get_field("template")
 template_choices = [(x, _(y)) for x,y in settings.CMS_TEMPLATES]
 t.choices.extend(template_choices)
 admin.site.register(Page, PageAdmin)

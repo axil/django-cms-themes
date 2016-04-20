@@ -1,3 +1,4 @@
+from __future__ import print_function
 VERSION = (1,0,11)
 __version__ = "1.0.11"
 import random
@@ -65,6 +66,6 @@ try:
 
     init_themes()
     set_themes()
-except Exception, ex:
-    print 'An error occured setting up the themes: %s' % ex
+except Exception as ex:
+    print('An error occured setting up the themes: %s' % ex)
 
